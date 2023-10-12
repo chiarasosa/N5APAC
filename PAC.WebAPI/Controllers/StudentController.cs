@@ -14,5 +14,10 @@ namespace PAC.WebAPI
     [Route("[controller]")]
     public class StudentController : ControllerBase
     {
+        private readonly IStudentLogic studentLogic;
+        public StudentController(IStudentLogic studentLogic)
+        {
+            this.studentLogic = studentLogic;
+        }
     }
 }
