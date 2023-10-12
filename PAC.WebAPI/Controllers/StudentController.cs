@@ -37,6 +37,7 @@ namespace PAC.WebAPI
         }
 
         [HttpGet]
+        [AgeFilter(MinAge = 18, MaxAge = 50)]
         public IActionResult GetStudents()
         {
             try
