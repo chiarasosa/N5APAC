@@ -15,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IStudentsRepository<Student>, StudentsRepository<Student>>();
+builder.Services.AddScoped<IStudentLogic<Student>, StudentLogic<Student>>();
+
 
 var app = builder.Build();
 
