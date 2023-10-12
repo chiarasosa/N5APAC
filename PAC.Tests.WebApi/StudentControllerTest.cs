@@ -19,7 +19,7 @@ public class StudentControllerTest
         public void PostStudentOk()
         {
             // Arrange
-            Mock<IStudentLogic> studentLogicMock = new Mock<IStudentLogic>();
+            Mock<IStudentLogic> studentLogicMock = new Mock<IStudentLogic>(MockBehavior.Strict);
             studentLogicMock.Setup(x => x.InsertStudents(It.IsAny<Student>()));
 
             var controller = new StudentController(studentLogicMock.Object);
@@ -40,7 +40,7 @@ public class StudentControllerTest
         public void PostStudentFail()
         {
         // Arrange
-            Mock<IStudentLogic> studentLogicMock = new Mock<IStudentLogic>();
+            Mock<IStudentLogic> studentLogicMock = new Mock<IStudentLogic>(MockBehavior.Strict);
         studentLogicMock.Setup(x => x.InsertStudents(It.IsAny<Student>()));
             var controller = new StudentController(studentLogicMock.Object);
 
