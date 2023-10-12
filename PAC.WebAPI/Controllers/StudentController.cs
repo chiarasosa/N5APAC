@@ -22,6 +22,7 @@ namespace PAC.WebAPI
         }
 
         [HttpPost]
+        [AuthorizationFilter]
         public IActionResult Post(Student student)
         {
             try
